@@ -1,0 +1,23 @@
+# cmake_minimum_required(VERSION 3.1)
+
+# # 项目名称
+# project(onnxinfer)
+# set (CMAKE_CXX_STANDARD 17)
+
+# # 找到 OpenCV 库
+# find_package(OpenCV REQUIRED)
+# include_directories(${OpenCV_INCLUDE_DIRS})
+
+# # 设置 ONNX Runtime 目录
+# set(ONNXRUNTIME_DIR "C:/Users/15511/Desktop/python/c++/onnxinfer-main/onnxinfer/include/onnxruntime-linux-aarch64-1.16.3")
+
+# # 添加包含目录
+# include_directories(${ONNXRUNTIME_DIR}/include)
+# include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# # 添加源代码文件
+# file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/src/*.cpp")
+# add_executable(onnxinfer ${SOURCES})
+
+# # 链接 ONNX Runtime、OpenCV 
+# target_link_libraries(onnxinfer ${OpenCV_LIBS} ${ONNXRUNTIME_DIR}/lib/libonnxruntime.so)
