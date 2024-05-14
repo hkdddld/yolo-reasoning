@@ -31,6 +31,7 @@ class YOLOv5:
         self.classes=classes
 
         self.color_palette=np.random.uniform(0,255,size=(len(self.classes),3))
+        cuda.init()#初始化
         self.cfx=cuda.Device(0).make_context()#CUDA 上下文堆栈 确定工作的gpu
         stream=cuda.Stream()#创建一个CUDA流
         TRT_LOGGER=trt.Logger(trt.Logger.INFO)#日志记录器 输出级别为INFO以上的信息
